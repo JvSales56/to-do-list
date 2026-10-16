@@ -1,7 +1,8 @@
-import { useState } from "react";
+import { useState, memo } from "react";
 import "./Chore.css";
 
 function Chore ({text}){
+
     const [completed, setCompleted] = useState(false);
 
     const alterateCompleted = () =>{
@@ -17,4 +18,4 @@ function Chore ({text}){
     )
 }
 
-export default Chore
+export default memo(Chore);
